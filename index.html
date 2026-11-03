@@ -2,36 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Catcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitty Star Party</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
-    <h1>⭐ Star Catcher</h1>
-    <p>Catch the stars. Miss three and the game ends!</p>
+    <h1>🌈 Kitty Star Party</h1>
+    <p class="intro">Help Kitty catch the rainbow stars!</p>
 
     <div class="scoreboard">
-      <span>Score: <strong id="score">0</strong></span>
-      <span>Lives: <strong id="lives">3</strong></span>
+      <span>⭐ <strong id="score">0</strong></span>
+      <span>❤️ <strong id="lives">5</strong></span>
     </div>
 
-    <canvas
-      id="game"
-      width="360"
-      height="480"
-      aria-label="Star Catcher game area"
-    ></canvas>
+    <div class="play-area">
+      <canvas id="game" width="360" height="440"
+        aria-label="Tap the colorful moving stars"></canvas>
+
+      <div id="overlay">
+        <div id="face">😺</div>
+        <h2 id="overlay-title">Ready for a star party?</h2>
+        <p id="overlay-text">Tap the stars and hear silly sounds!</p>
+        <button id="start" type="button">Let’s Play! ✨</button>
+      </div>
+    </div>
 
     <div class="controls">
-      <button id="left" type="button" aria-label="Move left">◀</button>
-      <button id="start" type="button">Start Game</button>
-      <button id="right" type="button" aria-label="Move right">▶</button>
+      <button id="pause" type="button" disabled>⏸ Pause</button>
+      <button id="restart" type="button">🔄 Restart</button>
     </div>
 
-    <p id="message" role="status">
-      Use the arrow keys or the left and right buttons.
-    </p>
+    <p id="message" role="status">Kitty is waiting to play! 🐾</p>
   </main>
 
   <script src="script.js"></script>
